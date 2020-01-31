@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{821A694E-F449-4FE2-BEEC-B6859E570654}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Scada</RootNamespace>
+    <AssemblyName>Scada</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAlarm.Designer.cs">
+      <DependentUpon>FrmAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHardConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHardConfig.Designer.cs">
+      <DependentUpon>FrmHardConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHardConfig_sub\FrmModifyVar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHardConfig_sub\FrmModifyVar.Designer.cs">
+      <DependentUpon>FrmModifyVar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHardConfig_sub\FrmNewVar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHardConfig_sub\FrmNewVar.Designer.cs">
+      <DependentUpon>FrmNewVar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmParamSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParamSet.Designer.cs">
+      <DependentUpon>FrmParamSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuery.designer.cs">
+      <DependentUpon>FrmQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReport.Designer.cs">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTrend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTrend.Designer.cs">
+      <DependentUpon>FrmTrend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView.Designer.cs">
+      <DependentUpon>FrmView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHardConfig_sub\FrmIOVarManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHardConfig_sub\FrmIOVarManage.Designer.cs">
+      <DependentUpon>FrmIOVarManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Control.designer.cs">
+      <DependentUpon>Frm_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ReportSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ReportSet.designer.cs">
+      <DependentUpon>Frm_ReportSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintOptions.designer.cs">
+      <DependentUpon>PrintOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FrmHardConfig_sub\FrmPortSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHardConfig_sub\FrmPortSet.Designer.cs">
+      <DependentUpon>FrmPortSet.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmAlarm.resx">
+      <DependentUpon>FrmAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHardConfig.resx">
+      <DependentUpon>FrmHardConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHardConfig_sub\FrmModifyVar.resx">
+      <DependentUpon>FrmModifyVar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHardConfig_sub\FrmNewVar.resx">
+      <DependentUpon>FrmNewVar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParamSet.resx">
+      <DependentUpon>FrmParamSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuery.resx">
+      <DependentUpon>FrmQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReport.resx">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTrend.resx">
+      <DependentUpon>FrmTrend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView.resx">
+      <DependentUpon>FrmView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHardConfig_sub\FrmIOVarManage.resx">
+      <DependentUpon>FrmIOVarManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Control.resx">
+      <DependentUpon>Frm_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ReportSet.resx">
+      <DependentUpon>Frm_ReportSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintOptions.resx">
+      <DependentUpon>PrintOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FrmHardConfig_sub\FrmPortSet.resx">
+      <DependentUpon>FrmPortSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{f119eafa-f587-4927-bfcf-9df84016e59c}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{e1d72c46-6883-42a5-ad49-764f34951aa1}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{a671b426-e5b4-43d5-9805-92cdaf0dbd77}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyControl\MyControl.csproj">
+      <Project>{85E148B8-FC17-4252-B49B-C6D6A70C4AD3}</Project>
+      <Name>MyControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黄鹤楼.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\储气罐%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分汽缸.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\干燥机.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\过滤器.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空压机.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\水箱.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\系统登录.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
